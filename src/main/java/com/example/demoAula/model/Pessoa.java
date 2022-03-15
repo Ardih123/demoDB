@@ -12,8 +12,10 @@ public class Pessoa {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-	@ManyToOne
-	@JoinColumn(name="id", nullable=false)
+    @ManyToOne
+    @JoinColumn(name="empresa_id", nullable=false)
+    private Empresa empresa;
+    
     private int age;
     private String name;
 

@@ -1,5 +1,7 @@
 package com.example.demoAula.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +17,9 @@ public class Empresa {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToMany(mappedBy="Empresa")
+	@OneToMany(mappedBy="empresa")
+	private List<Pessoa> pessoas;
+	
 	private String name, address;
 
 	public String getName() {
