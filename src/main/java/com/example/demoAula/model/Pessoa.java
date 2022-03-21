@@ -13,7 +13,7 @@ public class Pessoa {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="empresa_id", nullable=false)
+    @JoinColumn(name="empresa_id")
     private Empresa empresa;
     
     private int age;
